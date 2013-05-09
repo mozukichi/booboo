@@ -1,0 +1,5 @@
+name: booboo
+description: booboo
+dependencies:
+  browser: any
+  three: 0.2.5+1
