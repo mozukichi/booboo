@@ -1,5 +1,6 @@
 import 'dart:html';
-import 'package:three/three.dart';
+//import 'package:three/three.dart';
+import '../../three/lib/three.dart';
 
 Scene scene;
 PerspectiveCamera camera;
@@ -11,12 +12,13 @@ main() {
   
   scene = new Scene();
   
-  camera = new PerspectiveCamera(70, 640 / 480, 1, 1000);
-  camera.position.z = 400;
+  camera = new PerspectiveCamera(70.0, 640.0 / 480.0, 1.0, 1000.0);
+  camera.position.setValues(0.0, 0.0, 400.0);
+  //camera.position.z = 400.0;
 
   scene.add(camera);
 
-  CubeGeometry geometry = new CubeGeometry(200, 200, 200);
+  CubeGeometry geometry = new CubeGeometry(200.0, 200.0, 200.0);
   MeshBasicMaterial material = new MeshBasicMaterial(color: 0x0000ff);
 
   cube = new Mesh(geometry, material);
