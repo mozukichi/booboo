@@ -1,4 +1,4 @@
 library core;
 
-part 'Assets.dart';
-part 'Input.dart';
+part 'assets.dart';
+part 'input.dart';
