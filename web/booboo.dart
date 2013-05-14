@@ -24,7 +24,7 @@ main() {
   renderer.setSize(640, 480);
 
   container.nodes.add(renderer.domElement);
-  
+
   controller = new GameController();
   controller.start();
 }
