@@ -1,6 +1,7 @@
 library booboo;
 
 import 'dart:html';
+import 'dart:math';
 //import 'package:three/three.dart';
 import '../../three/lib/three.dart';
 import 'core/core.dart';

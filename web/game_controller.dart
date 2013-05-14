@@ -1,20 +1,20 @@
 part of booboo;
 
 class GameController {
-  Scene _scene;
-  GameCamera _camera;
+  Scene _scene = new Scene();
+  GameCamera _camera = new GameCamera();
 
-  GameStage _stage;
-  PlayerCar _playerCar;
-
-  GameController()
-      : _scene = new Scene(),
-        _camera = new GameCamera(),
-        _playerCar = new PlayerCar();
+  GameStage _stage = new GameStage();
+  PlayerCar _playerCar = new PlayerCar();
 
   void start() {
-    _scene.add(_camera.camera);
-    _scene.add(_playerCar.object);
+    // デバッグ用のコースを作成
+    _stage.createDebugCource();
+
+    _scene
+      ..add(_camera.camera)
+      ..add(_playerCar.object)
+      ..add(_stage.stageMesh);
 
     _camera.follow = _playerCar.object;
 
@@ -24,6 +24,8 @@ class GameController {
   void _update(num delta) {
     _playerCar.update(delta);
     _camera.update();
+
+    _stage.stageMesh.rotation.y += 0.05;
 
     renderer.render(_scene, _camera.camera);
   }

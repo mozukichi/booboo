@@ -1,7 +1,7 @@
 part of booboo;
 
 class PlayerCar extends Car {
-  PlayerCar() {
+  PlayerCar() : super() {
     // TODO: プレイヤーの車のモデルを読み込む
     // 仮の豆腐を作成する
     CubeGeometry geometry = new CubeGeometry(1.0, 0.4, 2.0);

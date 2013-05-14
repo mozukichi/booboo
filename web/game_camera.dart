@@ -20,10 +20,11 @@ class GameCamera {
   }
 
   void update() {
-    camera.position.setValues(
+    /*camera.position.setValues(
         follow.position.x + _followOffset.x,
         follow.position.y + _followOffset.y,
-        follow.position.z + _followOffset.z);
+        follow.position.z + _followOffset.z);*/
+    camera.position.x += 0.05;
     camera.lookAt(follow.position);
   }
 }
