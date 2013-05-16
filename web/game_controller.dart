@@ -16,7 +16,8 @@ class GameController {
       ..add(_playerCar.object)
       ..add(_stage.stageMesh);
 
-    _camera.follow = _playerCar.object;
+    //_camera.follow = _playerCar.object;
+    _camera.follow = _stage.stageMesh;
 
     updater.onUpdate.listen(_update);
   }
